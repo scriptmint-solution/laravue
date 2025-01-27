@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 
 <head>
@@ -8,9 +9,9 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Hello World</h1>
-    </div>
+    <h1 class="text-3xl font-bold text-red-500 underline">
+        Hello world!
+    </h1>
 </body>
 
 </html>

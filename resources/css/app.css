@@ -1,5 +1,2 @@
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    color: #be1717;
-}
+@import "tailwindcss";
+@source "../views";
