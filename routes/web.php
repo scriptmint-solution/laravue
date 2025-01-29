@@ -2,8 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+require __DIR__.'/auth.php';
+
 Route::get('/', function () {
-    return view('app');
+    return view('welcome');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/app/{vue?}', function () {
+    return view('app');
+})->where('vue', '[\/\w\.-]*')->name('app');
+
+// Fallback route
+Route::fallback(function () {
+    abort(404);
+});
