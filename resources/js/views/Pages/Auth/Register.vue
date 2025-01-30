@@ -6,13 +6,30 @@
             <h2
                 class="mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900"
             >
-                Sign in to your account
+                Create your account
             </h2>
         </div>
 
         <div class="mt-8 mx-auto w-full sm:max-w-md">
             <div class="bg-white py-6 px-4 shadow rounded-lg sm:px-10 sm:py-8">
                 <form class="space-y-6">
+                    <div>
+                        <label
+                            for="name"
+                            class="block text-sm font-medium text-gray-700"
+                        >
+                            Full name
+                        </label>
+                        <div class="mt-1">
+                            <input
+                                id="name"
+                                type="text"
+                                required
+                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            />
+                        </div>
+                    </div>
+
                     <div>
                         <label
                             for="email"
@@ -47,28 +64,20 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
+                    <div>
+                        <label
+                            for="password_confirmation"
+                            class="block text-sm font-medium text-gray-700"
+                        >
+                            Confirm Password
+                        </label>
+                        <div class="mt-1">
                             <input
-                                id="remember-me"
-                                type="checkbox"
-                                class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                                id="password_confirmation"
+                                type="password"
+                                required
+                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
-                            <label
-                                for="remember-me"
-                                class="ml-2 block text-sm text-gray-900"
-                            >
-                                Remember me
-                            </label>
-                        </div>
-
-                        <div class="text-sm">
-                            <span
-                                @click="router.push({ name: 'ForgotPassword' })"
-                                class="cursor-pointer font-medium text-indigo-600 hover:text-indigo-500"
-                            >
-                                Forgot your password?
-                            </span>
                         </div>
                     </div>
 
@@ -77,7 +86,7 @@
                             type="submit"
                             class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                            Sign in
+                            Register
                         </button>
                     </div>
                 </form>
@@ -100,7 +109,7 @@
                                 href="#"
                                 class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                             >
-                                <span class="sr-only">Sign in with Google</span>
+                                <span class="sr-only">Sign up with Google</span>
                                 <svg class="w-5 h-5" viewBox="0 0 24 24">
                                     <path
                                         d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"
@@ -116,7 +125,7 @@
                                 class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                             >
                                 <span class="sr-only"
-                                    >Sign in with Facebook</span
+                                    >Sign up with Facebook</span
                                 >
                                 <svg
                                     class="w-5 h-5"
@@ -135,7 +144,7 @@
                                 href="#"
                                 class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                             >
-                                <span class="sr-only">Sign in with GitHub</span>
+                                <span class="sr-only">Sign up with GitHub</span>
                                 <svg
                                     class="w-5 h-5"
                                     fill="currentColor"
@@ -156,12 +165,12 @@
                     <div class="relative">
                         <div class="relative flex justify-center text-sm">
                             <span class="px-2 bg-white text-gray-500">
-                                Don't have an account?
+                                Already have an account?
                                 <span
-                                    @click="router.push({ name: 'Register' })"
+                                    @click="router.push({ name: 'Login' })"
                                     class="cursor-pointer font-medium text-indigo-600 hover:text-indigo-500"
                                 >
-                                    Register now
+                                    Sign in
                                 </span>
                             </span>
                         </div>
@@ -174,7 +183,7 @@
 
 <script>
 export default {
-    name: "AuthLogin",
+    name: "AuthRegister",
 };
 </script>
 
