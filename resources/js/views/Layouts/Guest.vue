@@ -1,5 +1,4 @@
 <template>
-    guest
     <router-view />
 </template>
 
