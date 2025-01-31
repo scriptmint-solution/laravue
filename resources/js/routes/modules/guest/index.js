@@ -4,7 +4,7 @@ export default [
         name: "Login",
         meta: {
             title: "Login",
-            description: "Login",
+            subtitle: "Sign in to your account",
         },
         component: () => import("@views/Pages/Auth/Login.vue"),
     },
@@ -13,7 +13,7 @@ export default [
         name: "Register",
         meta: {
             title: "Register",
-            description: "Register",
+            subtitle: "Create an account",
         },
         component: () => import("@views/Pages/Auth/Register.vue"),
     },
@@ -22,7 +22,7 @@ export default [
         name: "ForgotPassword",
         meta: {
             title: "Forgot Password",
-            description: "Forgot Password",
+            subtitle: "Reset your password",
         },
         component: () => import("@views/Pages/Auth/ForgotPassword.vue"),
     },
